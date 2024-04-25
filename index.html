@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Concurso Gastronômico">
     <meta name="keywords" content="concurso gastronômico, comida, food, são joão campina grande, restaurante, concurso, avaliação">
-    <meta property="og:image" content="https://concurso-gastronomico.netlify.app/assets/img/2440x1578.png">
+    <meta property="og:image" content="https://concurso.duplimagemled.com.br/assets/img/2440x1578.png">
 
     <!-- ========== Título da Página ========== -->
     <title>Concurso Gastronômico</title>
@@ -182,7 +182,7 @@
                                 <i class="fas fa-utensils"></i>
                             </div>
                             <h3>Avaliar Prato</h3>
-                            <form action="#">
+                            <form action="avalia.php" method="post">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
@@ -213,11 +213,11 @@
                                             <div class="form-group">
                                                 <label for="atendimento">Atendimento:</label>
                                                 <div class="rating" id="atendimento">
-                                                    <span class="star" data-rating="1">&#9733;</span>
-                                                    <span class="star" data-rating="2">&#9733;</span>
-                                                    <span class="star" data-rating="3">&#9733;</span>
-                                                    <span class="star" data-rating="4">&#9733;</span>
                                                     <span class="star" data-rating="5">&#9733;</span>
+                                                    <span class="star" data-rating="4">&#9733;</span>
+                                                    <span class="star" data-rating="3">&#9733;</span>
+                                                    <span class="star" data-rating="2">&#9733;</span>
+                                                    <span class="star" data-rating="1">&#9733;</span>
                                                     <input type="hidden" name="atendimento" id="atendimento-input">
                                                 </div>
                                             </div>
@@ -227,11 +227,11 @@
                                             <div class="form-group">
                                                 <label for="qualidade">Qualidade do Prato:</label>
                                                 <div class="rating" id="qualidade">
-                                                    <span class="star" data-rating="1">&#9733;</span>
-                                                    <span class="star" data-rating="2">&#9733;</span>
-                                                    <span class="star" data-rating="3">&#9733;</span>
-                                                    <span class="star" data-rating="4">&#9733;</span>
                                                     <span class="star" data-rating="5">&#9733;</span>
+                                                    <span class="star" data-rating="4">&#9733;</span>
+                                                    <span class="star" data-rating="3">&#9733;</span>
+                                                    <span class="star" data-rating="2">&#9733;</span>
+                                                    <span class="star" data-rating="1">&#9733;</span>
                                                     <input type="hidden" name="qualidade" id="qualidade-input">
                                                 </div>
                                             </div>
@@ -241,18 +241,44 @@
                                             <div class="form-group">
                                                 <label for="apresentacao">Apresentação do Prato:</label>
                                                 <div class="rating" id="apresentacao">
-                                                    <span class="star" data-rating="1">&#9733;</span>
-                                                    <span class="star" data-rating="2">&#9733;</span>
-                                                    <span class="star" data-rating="3">&#9733;</span>
-                                                    <span class="star" data-rating="4">&#9733;</span>
                                                     <span class="star" data-rating="5">&#9733;</span>
+                                                    <span class="star" data-rating="4">&#9733;</span>
+                                                    <span class="star" data-rating="3">&#9733;</span>
+                                                    <span class="star" data-rating="2">&#9733;</span>
+                                                    <span class="star" data-rating="1">&#9733;</span>
                                                     <input type="hidden" name="apresentacao" id="apresentacao-input">
                                                 </div>
                                             </div>
                                         </div>
+    
+                                        <style>
+                                            /* Estilo padrão das estrelas */
+                                            .rating .star {
+                                                color: grey;
+                                                cursor: pointer;
+                                            }
+                                        
+                                            /* Estilo das estrelas quando selecionadas */
+                                            .rating .star.selected {
+                                                color: gold;
+                                            }
+                                        </style>
+                                        
+                                        <script src="https://unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function () {
+                                                // Máscara para o campo de CPF
+                                                VMasker(document.getElementById('cpf')).maskPattern('999.999.999-99');
+
+                                                // Máscara para o campo de telefone
+                                                VMasker(document.getElementById('telefone')).maskPattern('(99) 99999-9999');
+                                            });
+                                        </script>
 
                                         <script>
                                             document.addEventListener('DOMContentLoaded', function () {
+                                                console.log("Script executado!"); 
+                                        
                                                 const ratings = document.querySelectorAll('.rating');
                                         
                                                 ratings.forEach(rating => {
@@ -262,7 +288,21 @@
                                                         star.addEventListener('click', function () {
                                                             const ratingType = rating.id;
                                                             const ratingValue = this.getAttribute('data-rating');
+                                                            console.log(`Tipo de classificação: ${ratingType}`); 
+                                                            console.log(`Valor de classificação: ${ratingValue}`); 
+                                        
+                                                            // Atualiza os valores de classificação
                                                             document.getElementById(`${ratingType}-input`).value = ratingValue;
+                                        
+                                                            // Remove a classe "selected" de todas as estrelas
+                                                            stars.forEach(s => s.classList.remove('selected'));
+                                        
+                                                            // Adiciona a classe "selected" às estrelas da direita para a esquerda
+                                                            for (let i = stars.length - 1; i >= 0; i--) {
+                                                                if (stars[i].getAttribute('data-rating') <= ratingValue) {
+                                                                    stars[i].classList.add('selected');
+                                                                }
+                                                            }
                                                         });
                                                     });
                                                 });

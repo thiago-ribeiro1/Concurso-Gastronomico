@@ -230,7 +230,7 @@
         $('.services-carousel').owlCarousel({
             loop: true,
             margin: 15,
-            autoplayTimeout: 4000, // Tempo de exibição entre os slides (em milissegundos)
+            autoplayTimeout: 2200, // Tempo de exibição entre os slides (em milissegundos)
             nav: true,
             navText: [
                 "<i class='fa fa-angle-left'></i>",
