@@ -4799,3 +4799,10 @@ footer.shadow .footer-bottom {
     padding: 4px 12px; /* preenchimento interno para espaçamento */
     text-decoration: none; /* Remove sublinhado padrão */
 }
+
+#chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Definir a altura para ocupar toda a altura da janela */
+}

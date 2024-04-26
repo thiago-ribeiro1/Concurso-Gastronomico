@@ -1,0 +1,44 @@
+html,body{
+    height: 100%;
+    }
+    
+    .form-container{
+    max-width: 350px;
+    padding: 1rem;
+    }
+
+    #background-login {
+        opacity: 0.75 !important;
+        position: fixed; /* posição fixa do background */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: -1; /* imagem atrás de todo o conteúdo */
+    }
+    
+    #texto-acessar-ranking {
+      font-family: "Dancing Script", cursive, Arial, Helvetica, sans-serif;
+      font-optical-sizing: auto;
+      font-weight: bold;
+      font-style: normal;
+      font-size: 35px;
+    }
+
+    #botao-enviar {
+        background-color: #e7272d;
+    }
+    
+    .form-control {
+        margin-bottom: 15px;
+    }
+
+    #botao-voltar {
+    background-color: #e7272d;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    margin-top: -5px;
+    }
+    

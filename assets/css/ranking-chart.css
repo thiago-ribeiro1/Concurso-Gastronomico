@@ -1,0 +1,51 @@
+h1 {
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 45px;
+
+}
+
+body {
+    margin: auto;
+    margin-top: 50px;
+    
+}
+
+#background-ranking {
+    height: 100%;
+    opacity: 0.6 !important;
+    position: fixed !important; /* posição fixa do background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1; /* imagem atrás de todo o conteúdo */
+}
+
+#botao-voltar {
+    background-color: #e7272d;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    margin-top: -5px;
+    }
+
+/* Media query para ajustar o tamanho do gráfico em dispositivos desktop */
+@media (min-width: 768px) {
+    canvas#cookieChart {
+        max-width: 70%; /* Ajuste o tamanho máximo do gráfico */
+        height: 90vh !important; /* Mantenha a proporção */
+    }
+}
+
+/* Media query para ajustar a altura do gráfico em dispositivos móveis com largura inferior a 768 pixels */
+@media (max-width: 767px) {
+    canvas#cookieChart {
+        max-width: 100%; /* Ajuste o tamanho máximo do gráfico */
+        height: 100vh; /* Define a altura como 80% da altura da página */
+    }
+}
