@@ -8,7 +8,7 @@ var config = {
         labels: ["Bar do Cuscuz", "Seu Manoel", "Pastel da Liberdade", "Picanha 200", "Sapore D'Itália", "Domino's Pizza"],
         datasets: [{
             label: "Número de Avaliações",
-            data: [125, 89, 65, 54, 25, 21, 16],
+            data: [125, 89, 65, 54, 45, 38, 36],
             backgroundColor: [ // Cores das barras
                 '#e7272d', // Cor da primeira barra
                 '#e7272d', // Cor da segunda barra
