@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Processar os dados do formulário, mas sem a conexão com o banco de dados
 
-    $_SESSION['cupom_fiscal'] = $_POST['cupom-fiscal'];
+    $_SESSION['cod-avaliacao'] = $_POST['cod-avaliacao'];
     $_SESSION['restaurante'] = $_POST['restaurante'];
     $_SESSION['nome'] = $_POST['name'];
     $_SESSION['cpf'] = $_POST['cpf'];
