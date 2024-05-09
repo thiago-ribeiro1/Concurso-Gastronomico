@@ -33,7 +33,7 @@ $clientIP = getRealIpAddr();
         <h2 class="text-2xl font-semibold mb-4">Avaliação Registrada</h2>
         <p class="mb-4">Obrigado por enviar sua avaliação!</p>
         <div class="mb-4">
-            <strong>Cupom Fiscal:</strong> <?php echo $_SESSION['cupom_fiscal']; ?><br>
+            <strong>Código de Avaliação:</strong> <?php echo $_SESSION['cod-avaliacao']; ?><br>
             <strong>Nome:</strong> <?php echo $_SESSION['nome']; ?><br>
             <strong>CPF:</strong> <?php echo $_SESSION['cpf']; ?><br>
             <strong>Telefone:</strong> <?php echo $_SESSION['telefone']; ?><br>
