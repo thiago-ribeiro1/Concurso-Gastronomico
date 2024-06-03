@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $media_geral = ($_POST['atendimento'] + $_POST['qualidade'] + $_POST['apresentacao']) / 3;
     $media_geral = number_format($media_geral, 2);
 
-    // Processar os dados do formulário, mas sem a conexão com o banco de dados
+    // Processar os dados do formulário
 
     $_SESSION['cod-avaliacao'] = $_POST['cod-avaliacao'];
     $_SESSION['restaurante'] = $_POST['restaurante'];
