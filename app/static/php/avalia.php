@@ -1,21 +1,5 @@
 <?php
 session_start();
-function getRealIpAddr() {
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-        // Verifica se o IP do cliente está disponível
-        $ip = $_SERVER['HTTP_CLIENT_IP'];
-    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        // Verifica se o IP foi passado por um proxy
-        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    } else {
-        // Se nenhuma informação de IP estiver disponível, usa o REMOTE_ADDR
-        $ip = $_SERVER['REMOTE_ADDR'];
-    }
-    return $ip;
-}
-
-// Obtém o IP do cliente
-$clientIP = getRealIpAddr();
 
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
