@@ -1,21 +1,5 @@
 <?php
 session_start();
-function getRealIpAddr() {
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-        // Verifica se o IP do cliente está disponível
-        $ip = $_SERVER['HTTP_CLIENT_IP'];
-    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        // Verifica se o IP foi passado por um proxy
-        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    } else {
-        // Se nenhuma informação de IP estiver disponível, usa o REMOTE_ADDR
-        $ip = $_SERVER['REMOTE_ADDR'];
-    }
-    return $ip;
-}
-
-// Obtém o IP do cliente
-$clientIP = getRealIpAddr();
 
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $media_geral = ($_POST['atendimento'] + $_POST['qualidade'] + $_POST['apresentacao']) / 3;
     $media_geral = number_format($media_geral, 2);
 
-    // Processar os dados do formulário, mas sem a conexão com o banco de dados
+    // Processar os dados do formulário
 
     $_SESSION['cod-avaliacao'] = $_POST['cod-avaliacao'];
     $_SESSION['restaurante'] = $_POST['restaurante'];
