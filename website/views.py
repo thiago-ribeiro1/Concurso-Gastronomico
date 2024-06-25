@@ -28,9 +28,9 @@ def bdc():
                 cpf=cpf,
                 telefone=telefone,
                 comentario=comentario,
-                atendimento_input=int(atendimento_input) if atendimento_input else None,  # Converte para inteiro se existir
-                qualidade_input=int(qualidade_input) if qualidade_input else None,
-                apresentacao_input=int(apresentacao_input) if apresentacao_input else None,
+                atendimento_input=int(atendimento_input),
+                qualidade_input=int(qualidade_input),
+                apresentacao_input=int(apresentacao_input),
                 restaurante=restaurante
             )
 
@@ -38,7 +38,7 @@ def bdc():
             db.session.commit()
 
             print('Voto registrado com sucesso!')
-            return 'Voto registrado com sucesso!'
+            return render_template("index.html")
         
         except Exception as e:
             db.session.rollback()
@@ -67,9 +67,9 @@ def seuManoel():
                 cpf=cpf,
                 telefone=telefone,
                 comentario=comentario,
-                atendimento_input=int(atendimento_input) if atendimento_input else None,
-                qualidade_input=int(qualidade_input) if qualidade_input else None,
-                apresentacao_input=int(apresentacao_input) if apresentacao_input else None,
+                atendimento_input=int(atendimento_input),
+                qualidade_input=int(qualidade_input),
+                apresentacao_input=int(apresentacao_input),
                 restaurante=restaurante
             )
 
@@ -77,7 +77,7 @@ def seuManoel():
             db.session.commit()
 
             print('Voto registrado com sucesso!')
-            return 'Voto registrado com sucesso!'
+            return render_template("index.html")
         
         except Exception as e:
             db.session.rollback()
@@ -106,9 +106,9 @@ def pastelDaLiberdade():
                 cpf=cpf,
                 telefone=telefone,
                 comentario=comentario,
-                atendimento_input=int(atendimento_input) if atendimento_input else None,
-                qualidade_input=int(qualidade_input) if qualidade_input else None,
-                apresentacao_input=int(apresentacao_input) if apresentacao_input else None,
+                atendimento_input=int(atendimento_input),
+                qualidade_input=int(qualidade_input),
+                apresentacao_input=int(apresentacao_input),
                 restaurante=restaurante
             )
 
@@ -116,7 +116,7 @@ def pastelDaLiberdade():
             db.session.commit()
 
             print('Voto registrado com sucesso!')
-            return 'Voto registrado com sucesso!'
+            return render_template("index.html")
         
         except Exception as e:
             db.session.rollback()
@@ -145,9 +145,9 @@ def picanha200():
                 cpf=cpf,
                 telefone=telefone,
                 comentario=comentario,
-                atendimento_input=int(atendimento_input) if atendimento_input else None,
-                qualidade_input=int(qualidade_input) if qualidade_input else None,
-                apresentacao_input=int(apresentacao_input) if apresentacao_input else None,
+                atendimento_input=int(atendimento_input),
+                qualidade_input=int(qualidade_input),
+                apresentacao_input=int(apresentacao_input),
                 restaurante=restaurante
             )
 
@@ -155,7 +155,7 @@ def picanha200():
             db.session.commit()
 
             print('Voto registrado com sucesso!')
-            return 'Voto registrado com sucesso!'
+            return render_template("index.html")
         
         except Exception as e:
             db.session.rollback()
@@ -184,9 +184,9 @@ def saporeDItalia():
                 cpf=cpf,
                 telefone=telefone,
                 comentario=comentario,
-                atendimento_input=int(atendimento_input) if atendimento_input else None,
-                qualidade_input=int(qualidade_input) if qualidade_input else None,
-                apresentacao_input=int(apresentacao_input) if apresentacao_input else None,
+                atendimento_input=int(atendimento_input),
+                qualidade_input=int(qualidade_input),
+                apresentacao_input=int(apresentacao_input),
                 restaurante=restaurante
             )
 
@@ -194,7 +194,7 @@ def saporeDItalia():
             db.session.commit()
 
             print('Voto registrado com sucesso!')
-            return 'Voto registrado com sucesso!'
+            return render_template("index.html")
         
         except Exception as e:
             db.session.rollback()
@@ -223,9 +223,9 @@ def dominos():
                 cpf=cpf,
                 telefone=telefone,
                 comentario=comentario,
-                atendimento_input=int(atendimento_input) if atendimento_input else None,
-                qualidade_input=int(qualidade_input) if qualidade_input else None,
-                apresentacao_input=int(apresentacao_input) if apresentacao_input else None,
+                atendimento_input=int(atendimento_input),
+                qualidade_input=int(qualidade_input),
+                apresentacao_input=int(apresentacao_input),
                 restaurante=restaurante
             )
 
@@ -233,7 +233,7 @@ def dominos():
             db.session.commit()
 
             print('Voto registrado com sucesso!')
-            return 'Voto registrado com sucesso!'
+            return render_template("index.html")
         
         except Exception as e:
             db.session.rollback()
