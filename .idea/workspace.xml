@@ -4,106 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4be9a79b-93ba-41ee-854f-fd0e0ba22771" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/website/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/website/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/website/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/website/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/website/templates/login-adm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/website/views.py" afterDir="false" />
+    <list default="true" id="a92e5860-996a-4cea-83c3-66e02e9fcdca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/website/templates/pastelDaLiberdade.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/templates/seuManoel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/animate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/bootsnav.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/bootsnav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/flaticon-set.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/flaticon-set.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/magnific-popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/owl.carousel.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/owl.theme.default.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/owl.theme.default.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/plugins.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/plugins.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/ranking-chart.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/ranking-chart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/ranking.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/ranking.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/Flaticon.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/Flaticon.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/Flaticon.woff" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/Flaticon.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/Flaticon.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/Flaticon.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-brands-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-brands-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-brands-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-brands-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-regular-400.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-regular-400.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-regular-400.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-regular-400.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-solid-900.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-solid-900.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-solid-900.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/fonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/fonts/fa-solid-900.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/2440x1578.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/2440x1578.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/ajax-loader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/ajax-loader.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/brush.svg" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/brush.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/carne-de-sol-na-nata.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/carne-de-sol-na-nata.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/error.gif" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/error.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/food.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/food.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/icon-food.ico" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/icon-food.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/julien-sarazin-n3mK4n_nF7g-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/julien-sarazin-n3mK4n_nF7g-unsplash.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/logo-food-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/logo-food-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/logo-food.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/logo-food.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/logo_unifacisa.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/logo_unifacisa.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/pattern-bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/pattern-bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/pattern.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/pattern.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/pexels-wdnet-291767.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/pexels-wdnet-291767.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/preloader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/preloader.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/sanduiche.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/sanduiche.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/sanduiche2.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/sanduiche2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/sebrae.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/sebrae.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/shape.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/shape.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/sj-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/sj-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/img/success.gif" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/img/success.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/YTPlayer.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/YTPlayer.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/bootsnav.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/bootsnav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/count-to.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/count-to.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/equal-height.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/equal-height.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/html5/html5shiv.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/html5/html5shiv.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/html5/respond.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/html5/respond.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/imagesloaded.pkgd.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/imagesloaded.pkgd.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/isotope.pkgd.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/isotope.pkgd.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery-1.12.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/jquery-1.12.4.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.appear.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/jquery.appear.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.easing.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/jquery.easing.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.magnific-popup.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/jquery.magnific-popup.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/jquery.nice-select.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/jquery.nice-select.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/modernizr.custom.13711.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/modernizr.custom.13711.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/owl.carousel.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/plugins.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/plugins.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/progress-bar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/progress-bar.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/script-charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/script-charts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/wow.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/js/wow.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/php/avalia.php" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/php/avalia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/php/resultado.php" beforeDir="false" afterPath="$PROJECT_DIR$/website/static/php/resultado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/bdc.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/bdc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/dominos.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/dominos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/estabelecimento.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/estabelecimento.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/login-adm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/login-estabelecimento.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/login-estabelecimento.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/pastel-da-liberdade.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/pastel-da-liberdade.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/picanha200.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/picanha200.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/ranking.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/ranking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/sapore-d-italia.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/sapore-d-italia.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/seu-manoel.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/seu-manoel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/instance/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/bdc.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/bdc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/dominos.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/dominos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/pastel-da-liberdade.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/picanha200.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/picanha200.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/sapore-d-italia.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/saporeDItalia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/seu-manoel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,33 +28,30 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2hNfAWYtcxyB5S6ldifdiguc0oF" />
+  <component name="ProjectId" id="2iLQSg8AItPBwax1rWtJAwzkqXQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/ATVD/Concurso Gastronomico/Concurso-Gastronomico",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\ATVD\Concurso Gastronomico\Concurso-Gastronomico\app\static\php" />
-      <recent name="E:\ATVD\Concurso Gastronomico\Concurso-Gastronomico\app\static\css" />
-      <recent name="E:\ATVD\Concurso Gastronomico\Concurso-Gastronomico\app" />
-      <recent name="E:\ATVD\Concurso Gastronomico\Concurso-Gastronomico\templates" />
-      <recent name="E:\ATVD\Concurso Gastronomico\Concurso-Gastronomico\static" />
+      <recent name="E:\ATVD\Concurso Gastronomico\Concurso-Gastronomico\website\templates\Restaurantes" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -153,14 +64,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4be9a79b-93ba-41ee-854f-fd0e0ba22771" name="Changes" comment="" />
-      <created>1717439312391</created>
+      <changelist id="a92e5860-996a-4cea-83c3-66e02e9fcdca" name="Changes" comment="" />
+      <created>1719267378306</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1717439312391</updated>
-      <workItem from="1717439313533" duration="1768000" />
-      <workItem from="1717514981014" duration="729000" />
-      <workItem from="1717524872199" duration="1443000" />
+      <updated>1719267378306</updated>
+      <workItem from="1719267379376" duration="53000" />
+      <workItem from="1719267476658" duration="708000" />
     </task>
     <servers />
   </component>

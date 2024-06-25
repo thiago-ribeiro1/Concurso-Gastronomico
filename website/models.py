@@ -8,17 +8,26 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150))
 
 class Voto(db.Model):
-    id = db.Column(db.Integer, primary_key=True, unique=True) 
-    idNfe = db.Column(db.Integer)
-    codAvaliacao = db.Column(db.Integer)
-    nome = db.Column(db.String(150))
-    cpf = db.Column(db.String(14)) #999.999.999-99
-    telefone = db.Column(db.String(15)) #(83) 99999-9999
-    comentario = db.Column(db.String(1500))
+    __tablename__ = 'voto'
 
-    def __init__(self, codAvaliacao, nome, cpf, telefone, comentario):
-        self.cod_avaliacao = codAvaliacao
+    id = db.Column(db.Integer, primary_key=True)
+    codAvaliacao = db.Column(db.String(255))
+    nome = db.Column(db.String(255))
+    cpf = db.Column(db.String(14))
+    telefone = db.Column(db.String(20))
+    comentario = db.Column(db.Text)
+    atendimento_input = db.Column(db.Integer)
+    qualidade_input = db.Column(db.Integer)
+    apresentacao_input = db.Column(db.Integer)
+    restaurante = db.Column(db.String(255))  # Coluna para armazenar o restaurante
+
+    def __init__(self, codAvaliacao, nome, cpf, telefone, comentario, atendimento_input, qualidade_input, apresentacao_input, restaurante):
+        self.codAvaliacao = codAvaliacao
         self.nome = nome
         self.cpf = cpf
         self.telefone = telefone
         self.comentario = comentario
+        self.atendimento_input = atendimento_input
+        self.qualidade_input = qualidade_input
+        self.apresentacao_input = apresentacao_input
+        self.restaurante = restaurante
