@@ -11,12 +11,20 @@ def login():
         user = request.form.get('user')
         password = request.form.get('password')
         
+        
         user = User.query.filter_by(user=user).first()
         if user:
-            if check_password_hash(user.password, password):
+            if user.password == password:
                 print('login success')
-                return redirect(url_for('views.ranking'))
-
+                print('deu certo', password)
+                if user.adm == 1:
+                    print ('ADM ENTRANDO')
+                    return redirect(url_for('views.ranking'))
+                elif user.adm == 0:
+                    print ('USUARIO ENTRANDO')
+                    return redirect(url_for('views.estabelecimento'))
+                else:
+                    print('erro')
             else:
                 print(password)
         else:
@@ -28,8 +36,7 @@ def login():
     user = request.form.get('user')
     senha = request.form.get('senha')
     '''
-    return render_template("login.html")
-    
+    return render_template("login-adm.html")
 
 '''
 #não to usando ---------------------------------#

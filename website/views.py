@@ -8,6 +8,14 @@ views = Blueprint('views', __name__)
 def home():
     return render_template("index.html")
 
+@views.route('/ranking')
+def ranking():
+    return render_template("ranking.html")
+
+@views.route('/estabelecimento')
+def estabelecimento():
+    return render_template("estabelecimento.html")
+
 @views.route('/bdc', methods=['GET', 'POST'])
 def bdc():
     if request.method == 'POST':
