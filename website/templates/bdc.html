@@ -51,7 +51,7 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
             <i class="fa fa-bars"></i>
           </button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/">
             <img src="../static/img/logo-food.png" class="logo logo-display" />
             <img src="../static/img/logo-food-2.png" class="logo logo-scrolled" />
           </a>
@@ -70,7 +70,7 @@
               <a href="#pratos">Pratos</a>
             </li>
             <li>
-              <a href="login.html">Login</a>
+              <a href="login">Login</a>
             </li>
           </ul>
         </div>
@@ -399,7 +399,7 @@
                       }
                     </style>
                     <button type="submit" id="botao-enviar" class="btn btn-primary w-100 my-2">
-                      Votar
+                      Enviar
                     </button>
 
                     <!--    -->
@@ -456,54 +456,54 @@
                             });
                           });
                         });
-                        
+
                         // Evento de clique no botão de enviar
                         document.getElementById("botao-enviar").addEventListener("click", function (event) {
-                            event.preventDefault(); // Cancela o envio padrão do formulário
+                          event.preventDefault(); // Cancela o envio padrão do formulário
 
-                            // Coleta dos dados do formulário
-                            const codAvaliacao = document.getElementById("codAvaliacao").value;
-                            const nome = document.getElementById("nome").value;
-                            const cpf = document.getElementById("cpf").value;
-                            const telefone = document.getElementById("telefone").value;
-                            const comentario = document.getElementById("comentario").value;
-                            const atendimento_input = document.getElementById("atendimento_input").value;
-                            const qualidade_input = document.getElementById("qualidade_input").value;
-                            const apresentacao_input = document.getElementById("apresentacao_input").value;
-                            const restaurante = document.getElementById("restaurante").value; // Valor fixo do restaurante
+                          // Coleta dos dados do formulário
+                          const codAvaliacao = document.getElementById("codAvaliacao").value;
+                          const nome = document.getElementById("nome").value;
+                          const cpf = document.getElementById("cpf").value;
+                          const telefone = document.getElementById("telefone").value;
+                          const comentario = document.getElementById("comentario").value;
+                          const atendimento_input = document.getElementById("atendimento_input").value;
+                          const qualidade_input = document.getElementById("qualidade_input").value;
+                          const apresentacao_input = document.getElementById("apresentacao_input").value;
+                          const restaurante = document.getElementById("restaurante").value; // Valor fixo do restaurante
 
-                            // Constrói os dados a serem enviados
-                            const formData = new URLSearchParams({
-                                codAvaliacao,
-                                nome,
-                                cpf,
-                                telefone,
-                                comentario,
-                                atendimento_input,
-                                qualidade_input,
-                                apresentacao_input,
-                                restaurante
-                            });
+                          // Constrói os dados a serem enviados
+                          const formData = new URLSearchParams({
+                            codAvaliacao,
+                            nome,
+                            cpf,
+                            telefone,
+                            comentario,
+                            atendimento_input,
+                            qualidade_input,
+                            apresentacao_input,
+                            restaurante
+                          });
 
-                            // Realiza o POST para o servidor
-                            fetch('/bdc', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/x-www-form-urlencoded',
-                                },
-                                body: formData.toString(),
-                            })
+                          // Realiza o POST para o servidor
+                          fetch('/bdc', {
+                            method: 'POST',
+                            headers: {
+                              'Content-Type': 'application/x-www-form-urlencoded',
+                            },
+                            body: formData.toString(),
+                          })
                             .then(response => response.json())
                             .then(data => {
-                                console.log('Sucesso:', data);
-                                // Lógica adicional após o envio bem-sucedido, se necessário
+                              console.log('Sucesso:', data);
+                              // Lógica adicional após o envio bem-sucedido, se necessário
                             })
                             .catch((error) => {
-                                console.error('Erro:', error);
-                                // Lógica de tratamento de erro, se necessário
+                              console.error('Erro:', error);
+                              // Lógica de tratamento de erro, se necessário
                             });
                         });
-                    });
+                      });
 
                     </script>
 

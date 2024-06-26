@@ -28,7 +28,7 @@ def login():
     user = request.form.get('user')
     senha = request.form.get('senha')
     '''
-    return render_template("login-adm.html")
+    return render_template("login.html")
     
 
 '''
