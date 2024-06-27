@@ -1,128 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Concurso Gastronômico" />
-    <meta
-      name="keywords"
-      content="concurso gastronômico, comida, food, são joão campina grande, restaurante, concurso, avaliação"
-    />
-    <meta
-      property="og:image"
-      content="https://concurso.duplimagemled.com.br/assets/img/2440x1578.png"
-    />
 
-    <!-- ========== Título da Página ========== -->
-    <title>Login Administradores - Concurso Gastronômico</title>
+<head>
+  <!-- ========== Meta Tags ========== -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Concurso Gastronômico" />
+  <meta name="keywords"
+    content="concurso gastronômico, comida, food, são joão campina grande, restaurante, concurso, avaliação" />
+  <meta property="og:image" content="../static/img/2440x1578.png" />
 
-    <!-- ========== Favicon Icon ========== -->
-    <link
-      rel="shortcut icon"
-      href="../static/img/icon-food.ico"
-      type="image/x-icon"
-    />
+  <!-- ========== Título da Página ========== -->
+  <title>Login Administradores - Concurso Gastronômico</title>
 
-    <!-- ========== CSS ========== -->
-    <link href="../static/css/login.css" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <!-- ========== Fim Stylesheet CSS ========== -->
+  <!-- ========== Favicon Icon ========== -->
+  <link rel="shortcut icon" href="../static/img/icon-food.ico" type="image/x-icon" />
 
-    <!-- ========== Google Fonts ========== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <!-- ========== CSS ========== -->
+  <link href="../static/css/login.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- ========== Fim Stylesheet CSS ========== -->
 
-  <body class="d-flex align-items-center py-4 bg-body-tertiary">
-    <main class="w-100 m-auto w-100 m-auto form-container">
-      <img
-        id="background-login"
-        src="../static/img/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg"
-        alt="background"
-      />
-      <form id="loginForm">
-        <img class="mb-4" src="../static/img/logo-food-2.png" alt="Logo" />
-        <h2 id="texto-acessar-ranking">Login</h2>
-        <div class="form-floating">
-          <input
-            type="text"
-            class="form-control"
-            id="emailInput"
-            placeholder="user"
-            required
-          />
-          <label for="floatingInput">User</label>
-        </div>
-        <div class="form-floating">
-          <input
-            type="password"
-            class="form-control"
-            id="passwordInput"
-            placeholder="senha"
-            required
-          />
-          <label for="floatingInput">Senha</label>
-        </div>
-        <button
-          type="submit"
-          id="botao-enviar"
-          class="btn btn-primary w-100 my-2"
-        >
-          Acessar
-        </button>
-      </form>
-    </main>
+  <!-- ========== Google Fonts ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet" />
+</head>
 
-    <button id="botao-voltar" class="btn btn-primary" onclick="voltar()">
-      Voltar
-    </button>
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
+  <main class="w-100 m-auto w-100 m-auto form-container">
+    <img id="background-login" src="../static/img/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg" alt="background" />
+    <form id="loginForm">
+      <img class="mb-4" src="../static/img/logo-food-2.png" alt="Logo" />
+      <h2 id="texto-acessar-ranking">Login</h2>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="emailInput" placeholder="user" required />
+        <label for="floatingInput">User</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="passwordInput" placeholder="senha" required />
+        <label for="floatingInput">Senha</label>
+      </div>
+      <button type="submit" id="botao-enviar" class="btn btn-primary w-100 my-2">
+        Acessar
+      </button>
+    </form>
+  </main>
 
-    <script>
-      // Função para executar após o carregamento completo da página
-      window.addEventListener("load", function () {
-        // Adiciona o evento de submit ao formulário de login
-        document
-          .getElementById("loginForm")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
+  <button id="botao-voltar" class="btn btn-primary" onclick="voltar()">
+    Voltar
+  </button>
 
-            // Obter valores de entrada
-            var email = document.getElementById("emailInput").value;
-            var password = document.getElementById("passwordInput").value;
+  <script>
+    // Função para executar após o carregamento completo da página
+    window.addEventListener("load", function () {
+      // Adiciona o evento de submit ao formulário de login
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-            // Verificar se o email e a senha estão corretos
+          // Obter valores de entrada
+          var email = document.getElementById("emailInput").value;
+          var password = document.getElementById("passwordInput").value;
 
-            if (email === "admin" && password === "concurso123") {
-              // Redirecionar para ranking.html
-              window.location.href = "ranking.html";
-            } else {
-              // Exibir mensagem de erro
-              alert(
-                "Usuário ou senha inválidos, tente novamente \nResultado do ranking só estará disponível no término do Concurso"
-              );
-            }
-          });
-      });
+          // Verificar se o email e a senha estão corretos
 
-      function voltar() {
-        // Botão voltar página
-        window.history.back();
-      }
-    </script>
+          if (email === "admin" && password === "concurso123") {
+            // Redirecionar para ranking.html
+            window.location.href = "ranking.html";
+          } else {
+            // Exibir mensagem de erro
+            alert(
+              "Usuário ou senha inválidos, tente novamente \nResultado do ranking só estará disponível no término do Concurso"
+            );
+          }
+        });
+    });
 
-    <!-- jQuery Frameworks
+    function voltar() {
+      // Botão voltar página
+      window.history.back();
+    }
+  </script>
+
+  <!-- jQuery Frameworks
     ============================================= -->
-    <script src="../static/js/main.js"></script>
-  </body>
+  <script src="../static/js/main.js"></script>
+</body>
+
 </html>
