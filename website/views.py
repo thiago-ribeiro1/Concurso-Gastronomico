@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, jsonify, send_file, send_from_directory, current_app
+from flask import Blueprint, render_template, request, jsonify, send_file, send_from_directory, current_app, redirect, url_for, flash
 from .models import Voto
 from . import db
 from sqlalchemy import func
@@ -10,7 +10,7 @@ views = Blueprint('views', __name__)
 
 @views.route('/')
 def home():
-    return render_template("index.html")
+    return render_template('index.html')
 
 @views.route('/estabelecimento')
 def estabelecimento():
@@ -19,6 +19,7 @@ def estabelecimento():
 @views.route('/bdc', methods=['GET', 'POST'])
 def bdc():
     if request.method == 'POST':
+        print('POST request received') 
         codAvaliacao = request.form.get('codAvaliacao')
         nome = request.form.get('nome')
         cpf = request.form.get('cpf')
@@ -27,10 +28,9 @@ def bdc():
         atendimento_input = request.form.get('atendimento_input')
         qualidade_input = request.form.get('qualidade_input')
         apresentacao_input = request.form.get('apresentacao_input')
-        restaurante = request.form.get('restaurante')  # Captura o restaurante do formulário
+        restaurante = request.form.get('restaurante')
 
-        try:
-            new_voto = Voto(
+        new_voto = Voto(
                 codAvaliacao=codAvaliacao,
                 nome=nome,
                 cpf=cpf,
@@ -41,18 +41,12 @@ def bdc():
                 apresentacao_input=int(apresentacao_input),
                 restaurante=restaurante
             )
+        db.session.add(new_voto)
+        db.session.commit()
 
-            db.session.add(new_voto)
-            db.session.commit()
-
-            print('Voto registrado com sucesso!')
-            return render_template("index.html")
-        
-        except Exception as e:
-            db.session.rollback()
-            print(f'Erro ao registrar voto: {str(e)}')
-            return f'Erro ao registrar voto: {str(e)}'
-
+        print('Voto registrado com sucesso!')
+        return redirect(url_for('views.home'))
+    
     return render_template("bdc.html")
 
 @views.route('/seuManoel', methods=['GET', 'POST'])
@@ -66,31 +60,27 @@ def seuManoel():
         atendimento_input = request.form.get('atendimento_input')
         qualidade_input = request.form.get('qualidade_input')
         apresentacao_input = request.form.get('apresentacao_input')
-        restaurante = request.form.get('restaurante')  # Captura o restaurante do formulário
+        restaurante = request.form.get('restaurante')
 
-        try:
-            new_voto = Voto(
-                codAvaliacao=codAvaliacao,
-                nome=nome,
-                cpf=cpf,
-                telefone=telefone,
-                comentario=comentario,
-                atendimento_input=int(atendimento_input),
-                qualidade_input=int(qualidade_input),
-                apresentacao_input=int(apresentacao_input),
-                restaurante=restaurante
+
+        new_voto = Voto(
+            codAvaliacao=codAvaliacao,
+            nome=nome,
+            cpf=cpf,
+            telefone=telefone,
+            comentario=comentario,
+            atendimento_input=int(atendimento_input),
+            qualidade_input=int(qualidade_input),
+            apresentacao_input=int(apresentacao_input),
+            restaurante=restaurante
             )
 
-            db.session.add(new_voto)
-            db.session.commit()
+        db.session.add(new_voto)
+        db.session.commit()
 
-            print('Voto registrado com sucesso!')
-            return render_template("index.html")
+        print('Voto registrado com sucesso!')
+        return redirect(url_for('index'))
         
-        except Exception as e:
-            db.session.rollback()
-            print(f'Erro ao registrar voto: {str(e)}')
-            return f'Erro ao registrar voto: {str(e)}'
 
     return render_template("seuManoel.html")
 
@@ -105,31 +95,26 @@ def pastelDaLiberdade():
         atendimento_input = request.form.get('atendimento_input')
         qualidade_input = request.form.get('qualidade_input')
         apresentacao_input = request.form.get('apresentacao_input')
-        restaurante = request.form.get('restaurante')  # Captura o restaurante do formulário
+        restaurante = request.form.get('restaurante')
 
-        try:
-            new_voto = Voto(
-                codAvaliacao=codAvaliacao,
-                nome=nome,
-                cpf=cpf,
-                telefone=telefone,
-                comentario=comentario,
-                atendimento_input=int(atendimento_input),
-                qualidade_input=int(qualidade_input),
-                apresentacao_input=int(apresentacao_input),
-                restaurante=restaurante
+
+        new_voto = Voto(
+            codAvaliacao=codAvaliacao,
+            nome=nome,
+            cpf=cpf,
+            telefone=telefone,
+            comentario=comentario,
+            atendimento_input=int(atendimento_input),
+            qualidade_input=int(qualidade_input),
+            apresentacao_input=int(apresentacao_input),
+            restaurante=restaurante
             )
 
-            db.session.add(new_voto)
-            db.session.commit()
+        db.session.add(new_voto)
+        db.session.commit()
 
-            print('Voto registrado com sucesso!')
-            return render_template("index.html")
-        
-        except Exception as e:
-            db.session.rollback()
-            print(f'Erro ao registrar voto: {str(e)}')
-            return f'Erro ao registrar voto: {str(e)}'
+        print('Voto registrado com sucesso!')
+        return redirect(url_for('index'))
 
     return render_template("pastelDaLiberdade.html")
 
@@ -144,31 +129,26 @@ def picanha200():
         atendimento_input = request.form.get('atendimento_input')
         qualidade_input = request.form.get('qualidade_input')
         apresentacao_input = request.form.get('apresentacao_input')
-        restaurante = request.form.get('restaurante')  # Captura o restaurante do formulário
+        restaurante = request.form.get('restaurante')
 
-        try:
-            new_voto = Voto(
-                codAvaliacao=codAvaliacao,
-                nome=nome,
-                cpf=cpf,
-                telefone=telefone,
-                comentario=comentario,
-                atendimento_input=int(atendimento_input),
-                qualidade_input=int(qualidade_input),
-                apresentacao_input=int(apresentacao_input),
-                restaurante=restaurante
+
+        new_voto = Voto(
+            codAvaliacao=codAvaliacao,
+            nome=nome,
+            cpf=cpf,
+            telefone=telefone,
+            comentario=comentario,
+            atendimento_input=int(atendimento_input),
+            qualidade_input=int(qualidade_input),
+            apresentacao_input=int(apresentacao_input),
+            restaurante=restaurante
             )
 
-            db.session.add(new_voto)
-            db.session.commit()
+        db.session.add(new_voto)
+        db.session.commit()
 
-            print('Voto registrado com sucesso!')
-            return render_template("index.html")
-        
-        except Exception as e:
-            db.session.rollback()
-            print(f'Erro ao registrar voto: {str(e)}')
-            return f'Erro ao registrar voto: {str(e)}'
+        print('Voto registrado com sucesso!')
+        return redirect(url_for('index'))
 
     return render_template("picanha200.html")
 
@@ -183,31 +163,26 @@ def saporeDItalia():
         atendimento_input = request.form.get('atendimento_input')
         qualidade_input = request.form.get('qualidade_input')
         apresentacao_input = request.form.get('apresentacao_input')
-        restaurante = request.form.get('restaurante')  # Captura o restaurante do formulário
+        restaurante = request.form.get('restaurante')
 
-        try:
-            new_voto = Voto(
-                codAvaliacao=codAvaliacao,
-                nome=nome,
-                cpf=cpf,
-                telefone=telefone,
-                comentario=comentario,
-                atendimento_input=int(atendimento_input),
-                qualidade_input=int(qualidade_input),
-                apresentacao_input=int(apresentacao_input),
-                restaurante=restaurante
+
+        new_voto = Voto(
+            codAvaliacao=codAvaliacao,
+            nome=nome,
+            cpf=cpf,
+            telefone=telefone,
+            comentario=comentario,
+            atendimento_input=int(atendimento_input),
+            qualidade_input=int(qualidade_input),
+            apresentacao_input=int(apresentacao_input),
+            restaurante=restaurante
             )
 
-            db.session.add(new_voto)
-            db.session.commit()
+        db.session.add(new_voto)
+        db.session.commit()
 
-            print('Voto registrado com sucesso!')
-            return render_template("index.html")
-        
-        except Exception as e:
-            db.session.rollback()
-            print(f'Erro ao registrar voto: {str(e)}')
-            return f'Erro ao registrar voto: {str(e)}'
+        print('Voto registrado com sucesso!')
+        return redirect(url_for('index'))
         
     return render_template("saporeDItalia.html")
 
@@ -222,35 +197,28 @@ def dominos():
         atendimento_input = request.form.get('atendimento_input')
         qualidade_input = request.form.get('qualidade_input')
         apresentacao_input = request.form.get('apresentacao_input')
-        restaurante = request.form.get('restaurante')  # Captura o restaurante do formulário
+        restaurante = request.form.get('restaurante')
 
-        try:
-            new_voto = Voto(
-                codAvaliacao=codAvaliacao,
-                nome=nome,
-                cpf=cpf,
-                telefone=telefone,
-                comentario=comentario,
-                atendimento_input=int(atendimento_input),
-                qualidade_input=int(qualidade_input),
-                apresentacao_input=int(apresentacao_input),
-                restaurante=restaurante
+
+        new_voto = Voto(
+            codAvaliacao=codAvaliacao,
+            nome=nome,
+            cpf=cpf,
+            telefone=telefone,
+            comentario=comentario,
+            atendimento_input=int(atendimento_input),
+            qualidade_input=int(qualidade_input),
+            apresentacao_input=int(apresentacao_input),
+            restaurante=restaurante
             )
 
-            db.session.add(new_voto)
-            db.session.commit()
+        db.session.add(new_voto)
+        db.session.commit()
 
-            print('Voto registrado com sucesso!')
-            return render_template("index.html")
-        
-        except Exception as e:
-            db.session.rollback()
-            print(f'Erro ao registrar voto: {str(e)}')
-            return f'Erro ao registrar voto: {str(e)}'
+        print('Voto registrado com sucesso!')
+        return redirect(url_for('index'))
 
     return render_template("dominos.html")
-
-
 
 
 def calcular_media_ponderada():
@@ -266,11 +234,11 @@ def calcular_media_ponderada():
 
     df = pd.DataFrame(result, columns=['restaurante', 'num_votos', 'media_atendimento', 'media_qualidade', 'media_apresentacao'])
 
-    # Definir os pesos dos votos
-    peso_votos = 0.5
-    peso_atendimento = 0.1667
-    peso_qualidade = 0.1667
-    peso_apresentacao = 0.1667
+    # Pesos dos votos
+    peso_votos = 0.64
+    peso_atendimento = 0.12
+    peso_qualidade = 0.12
+    peso_apresentacao = 0.12
 
     # Calcular a média ponderada
     max_votos = df['num_votos'].max()
@@ -290,7 +258,7 @@ def calcular_media_ponderada():
 
     # Plotar gráfico
     plt.figure(figsize=(10, 6))
-    plt.bar(df['restaurante'], df['media_ponderada'], color='skyblue')
+    plt.bar(df['restaurante'], df['media_ponderada'], color='red')
     plt.xlabel('Restaurantes')
     plt.ylabel('Média Ponderada')
     plt.title('Ranking de Restaurantes por Média Ponderada')

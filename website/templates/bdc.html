@@ -398,10 +398,14 @@
                         color: gold;
                       }
                     </style>
-                    <button type="submit" id="botao-enviar" class="btn btn-primary w-100 my-2">
+                    <button type="submit" id="botao-enviar" class="btn btn-primary w-100 my-2" onclick="aviso()">
                       Enviar
                     </button>
-
+                    <script>
+                      function aviso() {
+                        alert("Obrigado por avaliar!");
+                      }
+                    </script>
                     <!--    -->
                     <script src="https://unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
                     <script>
