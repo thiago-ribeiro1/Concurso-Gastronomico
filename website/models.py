@@ -32,3 +32,4 @@ class Voto(db.Model):
         self.qualidade_input = qualidade_input
         self.apresentacao_input = apresentacao_input
         self.restaurante = restaurante
+
