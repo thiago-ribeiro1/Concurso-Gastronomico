@@ -1,9 +1,10 @@
-from flask import Blueprint, render_template, request, jsonify, send_file, send_from_directory
+from flask import Blueprint, render_template, request, jsonify, send_file, send_from_directory, current_app
 from .models import Voto
 from . import db
 from sqlalchemy import func
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 views = Blueprint('views', __name__)
 
@@ -265,7 +266,7 @@ def calcular_media_ponderada():
 
     df = pd.DataFrame(result, columns=['restaurante', 'num_votos', 'media_atendimento', 'media_qualidade', 'media_apresentacao'])
 
-    # Definir os pesos
+    # Definir os pesos dos votos
     peso_votos = 0.5
     peso_atendimento = 0.1667
     peso_qualidade = 0.1667
@@ -277,11 +278,17 @@ def calcular_media_ponderada():
                              peso_atendimento * df['media_atendimento'] + 
                              peso_qualidade * df['media_qualidade'] + 
                              peso_apresentacao * df['media_apresentacao'])
+    
+    # Duas casas decimais
+    df['media_atendimento'] = df['media_atendimento'].round(2)
+    df['media_qualidade'] = df['media_qualidade'].round(2)
+    df['media_apresentacao'] = df['media_apresentacao'].round(2)
+    df['media_ponderada'] = df['media_ponderada'].round(2)
 
     # Ordenar os restaurantes pela média ponderada
     df = df.sort_values(by='media_ponderada', ascending=False)
 
-    # Plotar o gráfico
+    # Plotar gráfico
     plt.figure(figsize=(10, 6))
     plt.bar(df['restaurante'], df['media_ponderada'], color='skyblue')
     plt.xlabel('Restaurantes')
@@ -290,14 +297,16 @@ def calcular_media_ponderada():
     plt.xticks(rotation=45)
     plt.tight_layout()
 
-    # Salvar o gráfico em um arquivo temporário
+    # Configurar o caminho relativo para salvar o plot
+    plot_dir = os.path.join(current_app.root_path, 'static', 'plots')
+    if not os.path.exists(plot_dir):
+        os.makedirs(plot_dir)
 
-
-    plot_filename = 'E:/ATVD/ConcursoGastronomico/Concurso-Gastronomico/website/static/plots/plot.png'
+    plot_filename = os.path.join(plot_dir, 'plot.png')
     print(f"Salvando arquivo em: {plot_filename}")
+
+    # Salvar o gráfico
     plt.savefig(plot_filename)
-
-
     return df, plot_filename
 
 @views.route('/ranking')
