@@ -1,10 +1,3 @@
-/* ===================================================================
-    
-    Author          : Valid Theme
-    Template Name   : Rescaf - Food & Restauratn Template
-    Version         : 1.1
-    
-* ================================================================= */
 
 (function($) {
     "use strict";
