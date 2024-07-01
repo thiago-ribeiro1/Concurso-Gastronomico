@@ -1,6 +1,9 @@
 # Concurso-Gastronomico
 Concurso Gastronômico - Projeto Unifacisa
 
+![concurso2](https://github.com/thiago-ribeiro1/Concurso-Gastronomico/assets/127905420/97f6f598-96b1-4b20-86c8-681ad5b2a17e)
+
+
 <div style="display: inline_block"><br/>
  <img align="center" alt="html" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>	
 </div>
