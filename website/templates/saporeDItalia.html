@@ -387,16 +387,17 @@
                                             onclick="aviso()">
                                             Enviar
                                         </button>
-                                        <script>
-                                            function aviso() {
-                                                alert("Avaliação Registrada. Obrigado por enviar sua avaliação!");
-                                            }
-                                        </script>
 
                                         <!--    -->
                                         <script
                                             src="https://unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
                                         <script>
+
+                                            function aviso() {
+                                                alert("Avaliação Registrada. Obrigado por enviar sua avaliação!");
+                                                window.location.href = '/';
+                                              }
+                                            
                                             document.addEventListener(
                                                 "DOMContentLoaded",
                                                 function () {
@@ -489,6 +490,7 @@
                                                         .then(data => {
                                                             console.log('Sucesso:', data);
                                                             // Lógica adicional após o envio bem-sucedido, se necessário
+                                                            aviso(); // Chama a função aviso() após o envio (POST) bem-sucedido
                                                         })
                                                         .catch((error) => {
                                                             console.error('Erro:', error);
